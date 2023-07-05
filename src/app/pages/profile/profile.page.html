@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Profile
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!isEditing" (click)="startEditing()">Edit</ion-button>
+      <ion-button *ngIf="isEditing" (click)="saveChanges()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-info">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-input *ngIf="isEditing" [(ngModel)]="profile.name" type="text"></ion-input>
+          <span *ngIf="!isEditing">{{ profile.name }}</span>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Email: 
+          <span *ngIf="!isEditing">{{ profile.email }}</span>
+          <ion-input *ngIf="isEditing" [(ngModel)]="profile.email" type="text"></ion-input>
+        </p>
+        <p>Target Calories: 
+          <span *ngIf="!isEditing">{{ profile.targetCalories }}</span>
+          <ion-input *ngIf="isEditing" [(ngModel)]="profile.targetCalories" type="number"></ion-input>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="meal-log">
+    <ion-list-header>
+      <ion-label>Meal Log</ion-label>
+    </ion-list-header>
+    
+    <ion-card *ngFor="let day of mealHistory" (click)="openMealDetails(day)">
+      <ion-card-content>
+        <h2>{{ day.date | date:'short' }}</h2>
+        <p>{{ day.totalCalories }} Total Calories</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

@@ -1,0 +1,65 @@
+.calories-info {
+  margin: 20px;
+  font-size: 1.2em; 
+}
+
+.meals-list {
+  margin: 20px;
+}
+
+ion-card {
+  margin-bottom: 10px;
+}
+
+ion-card-content {
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+}
+
+ion-card-title {
+  font-size: 1.5em;
+}
+
+ion-list-header {
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+.content-flex-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.info-container {
+  display: flex;
+  margin: 20px;
+
+}
+
+.info-container ion-card {
+  width: 80%;  
+}
+
+.info-container .circle-card {
+  width: 20%;  
+  display: flex;
+  justify-content: center;
+}
+
+.remove-icon {
+  position: relative;
+  top: 15px;
+}
+
+.add-meal-button {
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}

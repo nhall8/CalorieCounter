@@ -1,0 +1,22 @@
+
+.info-container {
+    display: flex;
+  }
+
+  ion-card {
+    width: 75%;
+}
+
+.photo-card {
+    width: 25%;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.edit {
+  width: 100%;
+}
